@@ -117,9 +117,11 @@ The annotation generation pipeline is composed of 4 blocks:
     ```
 
 ## Tests
+
 Tests have been implemented to ensure the consistency of the pipeline.
 
     1. **Run all the tests**:
+
     It is mandatory to specify the path where the CARRADA dataset is located. Example: I put the `Carrada` folder in `/datasets/`, the path I should specify is `/datasets/`. If you are using Docker, the CARRADA dataset is extracted in the `/datasets/` folder by default.
     ```bash
     $ cd tests/
@@ -127,6 +129,7 @@ Tests have been implemented to ensure the consistency of the pipeline.
     ```
 
     2. **Run the tests independently**
+
     If the user didn't set the path to the `Carrada` folder yet, the following lines must be executed:
     ```bash
     $ cd carrada_dataset/scripts/
