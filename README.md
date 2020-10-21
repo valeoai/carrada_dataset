@@ -95,51 +95,52 @@ The annotation generation pipeline is composed of 4 blocks:
 - generate and track instances in the DoA-Doppler representation,
 - generate the annotation files.
 
-    1. **Run the entire pipeline**:
+1. **Run the entire pipeline**:
 
-    It is mandatory to specify the path where the CARRADA dataset is located. Example: I put the `Carrada` folder in `/datasets/`, the path I should specify is `/datasets/`. If you are using Docker, the CARRADA dataset is extracted in the `/datasets/` folder by default.
-    ```bash
-    $ cd scripts/
-    $ bash run_annotation_pipeline.sh /datasets/
-    ```
+It is mandatory to specify the path where the CARRADA dataset is located. Example: I put the `Carrada` folder in `/datasets/`, the path I should specify is `/datasets/`. If you are using Docker, the CARRADA dataset is extracted in the `/datasets/` folder by default.
+```bash
+$ cd scripts/
+$ bash run_annotation_pipeline.sh /datasets/
+```
 
-    2. **Run the blocks independently**:
+2. **Run the blocks independently**:
 
-    If the user didn't set the path to the `Carrada` folder yet, the following lines must be executed:
-    ```bash
-    $ cd carrada_dataset/scripts/
-    $ python set_path.py /datasets/
-    ```
-    Then, each script can be executed independently. Note that each step generates mandatory data for the next one, it is important to keep the pipeline order if the user doesn't have the intermediate data. All intermediate data are provided in the CARRADA dataset, thus the user is able to run any step if the data are downloaded correctly.
-    ```bash
-    $ cd scripts/
-    $ python name_of_the_script.py
-    ```
+If the user didn't set the path to the `Carrada` folder yet, the following lines must be executed:
+```bash
+$ cd carrada_dataset/scripts/
+$ python set_path.py /datasets/
+```
+Then, each script can be executed independently. Note that each step generates mandatory data for the next one, it is important to keep the pipeline order if the user doesn't have the intermediate data. All intermediate data are provided in the CARRADA dataset, thus the user is able to run any step if the data are downloaded correctly.
+```bash
+$ cd scripts/
+$ python name_of_the_script.py
+```
+
 
 ## Tests
 
 Tests have been implemented to ensure the consistency of the pipeline.
 
-    1. **Run all the tests**:
+1. **Run all the tests**:
 
-    It is mandatory to specify the path where the CARRADA dataset is located. Example: I put the `Carrada` folder in `/datasets/`, the path I should specify is `/datasets/`. If you are using Docker, the CARRADA dataset is extracted in the `/datasets/` folder by default.
-    ```bash
-    $ cd tests/
-    $ bash run_tests.sh /datasets/
-    ```
+It is mandatory to specify the path where the CARRADA dataset is located. Example: I put the `Carrada` folder in `/datasets/`, the path I should specify is `/datasets/`. If you are using Docker, the CARRADA dataset is extracted in the `/datasets/` folder by default.
+```bash
+$ cd tests/
+ $ bash run_tests.sh /datasets/
+```
 
-    2. **Run the tests independently**
+2. **Run the tests independently**
 
-    If the user didn't set the path to the `Carrada` folder yet, the following lines must be executed:
-    ```bash
-    $ cd carrada_dataset/scripts/
-    $ python set_path.py /datasets/
-    ```
-    Then, each test can be executed independently. Note that the script `test_transform_data.py` requires RAD tensors which will be available in a next release.
-    ```bash
-    $ cd tests/
-    $ python name_of_the_test.py
-    ```
+If the user didn't set the path to the `Carrada` folder yet, the following lines must be executed:
+```bash
+$ cd carrada_dataset/scripts/
+$ python set_path.py /datasets/
+```
+Then, each test can be executed independently. Note that the script `test_transform_data.py` requires RAD tensors which will be available in a next release.
+```bash
+$ cd tests/
+$ python name_of_the_test.py
+```
 
 ## Jupyter Notebook
 A Jupyter Notebook `visualize_samples.ipynb` is provided to visualize samples of the CARRADA dataset with annotations.
