@@ -116,6 +116,28 @@ The annotation generation pipeline is composed of 4 blocks:
     $ python name_of_the_script.py
     ```
 
+## Tests
+Tests have been implemented to ensure the consistency of the pipeline.
+
+    1. **Run all the tests**:
+    It is mandatory to specify the path where the CARRADA dataset is located. Example: I put the `Carrada` folder in `/datasets/`, the path I should specify is `/datasets/`. If you are using Docker, the CARRADA dataset is extracted in the `/datasets/` folder by default.
+    ```bash
+    $ cd tests/
+    $ bash run_tests.sh /datasets/
+    ```
+
+    2. **Run the tests independently**
+    If the user didn't set the path to the `Carrada` folder yet, the following lines must be executed:
+    ```bash
+    $ cd carrada_dataset/scripts/
+    $ python set_path.py /datasets/
+    ```
+    Then, each test can be executed independently. Note that the script `test_transform_data.py` requires RAD tensors which will be available in a next release.
+    ```bash
+    $ cd tests/
+    $ python name_of_the_test.py
+    ```
+
 ## Jupyter Notebook
 A Jupyter Notebook `visualize_samples.ipynb` is provided to visualize samples of the CARRADA dataset with annotations.
 Note that this notebook also uses RAD tensors, please comment or modify the code if necessary.
