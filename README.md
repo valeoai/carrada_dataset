@@ -36,12 +36,12 @@ $ git clone https://github.com/valeoai/carrada_dataset.git
 $ cd carrada_dataset/
 $ docker build . -t "carrada_dataset:Dockerfile"
 ```
-.bold[Important note]: The CARRADA dataset will be downloaded and unzipped in the Docker image. Make sure that the Docker user has sufficent rights and has around 80GB of available space on its hard drive. The allocated space to an image can be modified using the option `--memory="100g"`.
+**Important note**: The CARRADA dataset will be downloaded and unzipped in the Docker image. Make sure that the Docker user has sufficent rights and has around 80GB of available space on its hard drive. The allocated space to an image can be modified using the option `--memory="100g"`.
 
-2. Run a container and join an interactive session:
+2. Run a container and join an interactive session, you will be able to run the code and the tests on this session:
 ```
-docker run -d -it --name containername carrada_dataset:Dockerfile sleep infinity
-docker exec -it containername bash
+$ docker run -d -it --name containername carrada_dataset:Dockerfile sleep infinity
+$ docker exec -it containername bash
 ```
 
 
@@ -66,7 +66,9 @@ With this, you can edit the carrada_dataset code on the fly and import function 
 $ conda install -c menpo opencv
 ```
 
-3. Optional. To uninstall this package, run:
+3. Install all the dependencies using pip, please take a look at the [Dockerfile](./Dockerfile) for the list and versions of the dependencies. 
+
+4. Optional. To uninstall this package, run:
 ```bash
 $ pip uninstall carrada_dataset
 ```
@@ -80,7 +82,7 @@ If you are using Docker, the downloading and extraction of the dataset is alread
 
 Otherwise, the dataset is available on Arthur Ouaknine's personal web page using this link: [https://arthurouaknine.github.io/codeanddata/carrada](https://arthurouaknine.github.io/codeanddata/carrada)
 
-.bold[Importante note]: the Carrada.tar.gz file is 8.4GB but once it is extracted, the dataset is around 71.6GB. Please be sure you have at least 80GB avalaible on your hard drive.
+**Importante note**: the Carrada.tar.gz file is 8.4GB but once it is extracted, the dataset is around 71.6GB. Please be sure you have at least 80GB avalaible on your hard drive.
 
 The CARRADA dataset contains the camera images, the raw radar data and the generated annotations. A `README.md` file in the dataset provides details about all the files. It is not mandatory to run the entire pipeline to obtain the annotations.
 
@@ -126,7 +128,7 @@ Tests have been implemented to ensure the consistency of the pipeline.
 It is mandatory to specify the path where the CARRADA dataset is located. Example: I put the `Carrada` folder in `/datasets/`, the path I should specify is `/datasets/`. If you are using Docker, the CARRADA dataset is extracted in the `/datasets/` folder by default.
 ```bash
 $ cd tests/
- $ bash run_tests.sh /datasets/
+$ bash run_tests.sh /datasets/
 ```
 
 2. **Run the tests independently**
@@ -145,6 +147,12 @@ $ python name_of_the_test.py
 ## Jupyter Notebook
 A Jupyter Notebook `visualize_samples.ipynb` is provided to visualize samples of the CARRADA dataset with annotations.
 Note that this notebook also uses RAD tensors, please comment or modify the code if necessary.
+
+**Run Jupyter on Docker:** a command line is already written in the [Dockerfile](./Dockerfile) to execute Jupyter on a container. The user should map the port of the container on its local machine using the following command:
+```
+$ docker run -p 8889:8889 carrada_dataset:Dockerfile
+```
+The Jupyter interface is then available on your local machine at `localhost:8889`.
 
 ## Acknowledgements
 

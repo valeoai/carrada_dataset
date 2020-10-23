@@ -21,4 +21,4 @@ RUN wget -P /datasets http://download.tsi.telecom-paristech.fr/Carrada/Carrada.t
 RUN tar -xvzf /datasets/Carrada.tar.gz -C /datasets
 
 # Define commands for Jupyter Notebook
-# CMD ["jupyter", "notebook", "--port=8889", "--no-browser", "--ip=0.0.0.0", "--allow-root"]
+CMD ["jupyter", "notebook", "--port=8889", "--no-browser", "--ip=0.0.0.0", "--allow-root"]
