@@ -169,4 +169,4 @@ The Jupyter interface is then available on your local machine at `localhost:8889
 
 ## To-Do List
 
-- [] Migration to Pathlib for multi os support
+- [ ] Migration to Pathlib for multi os support
