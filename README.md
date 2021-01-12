@@ -164,3 +164,9 @@ The Jupyter interface is then available on your local machine at `localhost:8889
 ## Licenses
  - The carrada_dataset repo is released under the [GNU GPL 3.0 license](./LICENSE).
  - The CARRADA dataset is released under the [Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International Public License (“CC BY-NC-SA 4.0”)](https://creativecommons.org/licenses/by-nc-sa/4.0/legalcode).
+
+---
+
+## To-Do List
+
+- [] Migration to Pathlib for multi os support
