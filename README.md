@@ -1,14 +1,17 @@
 # CARRADA Dataset: Camera and Automotive Radar with Range-Angle-Doppler Annotations
 
+## Updates
+
+- 04/2021: A new version of CARRADA is released ! You have now access to the angle-Doppler view of the RAD tensor, each view are also available with different processing (have a look into the README of the dataset).
+- 01/2021: Our paper has been presented at ICPR2020
+
 ## Paper
 
 ![annotation_examples](./images/annotation_examples.png)
 
-[CARRADA Dataset: Camera and Automotive Radar with Range-Angle-Doppler Annotations](https://arxiv.org/abs/2005.01456)
+[CARRADA Dataset: Camera and Automotive Radar with Range-Angle-Doppler Annotations](https://arxiv.org/abs/2005.01456), ICPR 2020.
 
 [Arthur Ouaknine](https://arthurouaknine.github.io/), [Alasdair Newson](https://sites.google.com/site/alasdairnewson/), [Julien Rebut](https://scholar.google.com/citations?user=BJcQNcoAAAAJ&hl=fr), [Florence Tupin](https://perso.telecom-paristech.fr/tupin/), [Patrick Pérez](https://ptrckprz.github.io/)
-
-ICPR 2020.
 
 If you find this code or the dataset useful for your research, please cite our [paper](https://arxiv.org/pdf/2005.01456.pdf):
 ```
@@ -36,7 +39,7 @@ $ git clone https://github.com/valeoai/carrada_dataset.git
 $ cd carrada_dataset/
 $ docker build . -t "carrada_dataset:Dockerfile"
 ```
-**Important note**: The CARRADA dataset will be downloaded and unzipped in the Docker image. Make sure that the Docker user has sufficent rights and has around 80GB of available space on its hard drive. The allocated space to an image can be modified using the option `--memory="100g"`.
+**Important note**: The CARRADA dataset will be downloaded and unzipped in the Docker image. Make sure that the Docker user has sufficent rights and has around 90GB of available space on its hard drive. The allocated space to an image can be modified using the option `--memory="100g"`.
 
 2. Run a container and join an interactive session, you will be able to run the code and the tests on this session:
 ```
@@ -54,7 +57,7 @@ You can either use Docker with the provided [Dockerfile](./Dockerfile) containin
 $ git clone https://github.com/valeoai/carrada_dataset.git
 ```
 
-1. Install this repository and the dependencies using pip and conda:
+1. Install this repository and the dependencies using pip:
 ```bash
 $ cd carrada_dataset/
 $ pip install -e .
@@ -66,7 +69,7 @@ With this, you can edit the carrada_dataset code on the fly and import function 
 $ conda install -c menpo opencv
 ```
 
-3. Install all the dependencies using pip, please take a look at the [Dockerfile](./Dockerfile) for the list and versions of the dependencies. 
+3. Install all the dependencies using pip and conda, please take a look at the [Dockerfile](./Dockerfile) for the list and versions of the dependencies. 
 
 4. Optional. To uninstall this package, run:
 ```bash
@@ -82,7 +85,7 @@ If you are using Docker, the downloading and extraction of the dataset is alread
 
 Otherwise, the dataset is available on Arthur Ouaknine's personal web page using this link: [https://arthurouaknine.github.io/codeanddata/carrada](https://arthurouaknine.github.io/codeanddata/carrada)
 
-**Importante note**: the Carrada.tar.gz file is 8.4GB but once it is extracted, the dataset is around 71.6GB. Please be sure you have at least 80GB avalaible on your hard drive.
+**Importante note**: the Carrada.tar.gz file is 23GB but once it is extracted, the dataset is around 90GB. Please be sure you have at least 90GB avalaible on your hard drive.
 
 The CARRADA dataset contains the camera images, the raw radar data and the generated annotations. A `README.md` file in the dataset provides details about all the files. It is not mandatory to run the entire pipeline to obtain the annotations.
 
