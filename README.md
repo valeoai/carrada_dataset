@@ -15,13 +15,15 @@
 
 If you find this code or the dataset useful for your research, please cite our [paper](https://arxiv.org/pdf/2005.01456.pdf):
 ```
-@misc{ouaknine2020carrada,
-    title={CARRADA Dataset: Camera and Automotive Radar with Range-Angle-Doppler Annotations},
-    author={A. Ouaknine and A. Newson and J. Rebut and F. Tupin and P. Pérez},
-    year={2020},
-    eprint={2005.01456},
-    archivePrefix={arXiv},
-    primaryClass={cs.CV}
+@INPROCEEDINGS{9413181,
+    author={Ouaknine, Arthur and Newson, Alasdair and Rebut, Julien and Tupin, Florence and Pérez, Patrick},
+    booktitle={2020 25th International Conference on Pattern Recognition (ICPR)},
+    title={CARRADA Dataset: Camera and Automotive Radar with Range- Angle- Doppler Annotations},
+    year={2021},
+    volume={},
+    number={},
+    pages={5068-5075},
+    doi={10.1109/ICPR48806.2021.9413181}
 }
 ```
 
