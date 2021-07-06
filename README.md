@@ -2,6 +2,7 @@
 
 ## Updates
 
+- 07/2021: RAD tensors of the CARRADA dataset are now available [here](https://arthurouaknine.github.io/codeanddata/carrada).
 - 04/2021: A new version of CARRADA is released ! You have now access to the angle-Doppler view of the RAD tensor, each view are also available with different processing (have a look into the README of the dataset).
 - 01/2021: Our paper has been presented at ICPR2020
 
@@ -91,7 +92,7 @@ Otherwise, the dataset is available on Arthur Ouaknine's personal web page using
 
 The CARRADA dataset contains the camera images, the raw radar data and the generated annotations. A `README.md` file in the dataset provides details about all the files. It is not mandatory to run the entire pipeline to obtain the annotations.
 
-A second release of the CARRADA dataset with full raw RAD tensors for every sequence is planned.
+The .bold[RAD tensors] of each recorded sequence are also available in a separated file due to its large size (176GB compressed, 198GB otherwise). This part of the dataset will not be automatically downloaded using this repo, however it is publicly accessible on [Arthur Ouaknine's personal web page](https://arthurouaknine.github.io/codeanddata/carrada).
 
 
 ## Generate annotations:
