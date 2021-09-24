@@ -103,8 +103,8 @@ class RDPointsGenerator(Configurable):
                     doppler_coord = rd_points_coordinates[rd_id][instance]['doppler'][i]
                     rd_coord.append([range_coord, doppler_coord])
                 rd_coord = np.array(rd_coord)
-                visualiser.add_annotation(rd_coord, idx, 'sparse')
-            visualiser.save_multiple_annotation(os.path.join(annotated_rd_path, rd_id + '.png'))
+                visualiser.add_annotation(idx, rd_coord, 'sparse')
+            visualiser.save_multiple_annotations(os.path.join(annotated_rd_path, rd_id + '.png'))
 
     def _save_points(self, data, name):
         """Save json file with points"""
